@@ -1,10 +1,11 @@
 import { beforeEach, afterEach } from 'vitest'
-import { cleanup } from '@testing-library/dom'
 import '@testing-library/jest-dom'
 
 // Clean up after each test
 afterEach(() => {
-  cleanup()
+  // Clear DOM manually since we're not using React Testing Library
+  document.body.innerHTML = ''
+  document.head.innerHTML = '<meta charset="UTF-8">'
 })
 
 // Setup global test environment

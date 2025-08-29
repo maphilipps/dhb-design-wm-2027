@@ -14,10 +14,10 @@ describe('BodyText Component', () => {
       tag: 'p',
       size: 'base',
       weight: 'normal',
-      color: 'primary'
+      color: 'primary',
     }
     container.innerHTML = Component(testArgs)
-    
+
     const textElement = container.querySelector('.body-text')
     expect(textElement).toBeTruthy()
     expect(textElement.textContent).toBe('Test body text content')
@@ -30,9 +30,9 @@ describe('BodyText Component', () => {
       text: 'Test text',
       size: 'lead',
       weight: 'bold',
-      color: 'yellow'
+      color: 'yellow',
     })
-    
+
     const textElement = container.querySelector('.body-text')
     expect(textElement).toBeTruthy()
     expect(textElement.className).toContain('body-text--lead')
@@ -43,9 +43,9 @@ describe('BodyText Component', () => {
   test('uses default values correctly', () => {
     const container = document.createElement('div')
     container.innerHTML = Component({
-      text: 'Minimal test text'
+      text: 'Minimal test text',
     })
-    
+
     const textElement = container.querySelector('.body-text')
     expect(textElement.tagName.toLowerCase()).toBe('p')
     expect(textElement.className).toContain('body-text--base')
@@ -57,9 +57,9 @@ describe('BodyText Component', () => {
     const container = document.createElement('div')
     container.innerHTML = Component({
       text: 'Test text',
-      id: 'custom-text-id'
+      id: 'custom-text-id',
     })
-    
+
     const textElement = container.querySelector('#custom-text-id')
     expect(textElement).toBeTruthy()
   })
@@ -68,9 +68,9 @@ describe('BodyText Component', () => {
     const container = document.createElement('div')
     container.innerHTML = Component({
       text: 'This is a span element',
-      tag: 'span'
+      tag: 'span',
     })
-    
+
     const textElement = container.querySelector('span.body-text')
     expect(textElement).toBeTruthy()
     expect(textElement.textContent).toBe('This is a span element')

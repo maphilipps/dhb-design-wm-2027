@@ -18,10 +18,18 @@
     "test-storybook": "test-storybook",
     "test-storybook:update": "test-storybook -u",
     "test-storybook:ci": "concurrently -k -s first -n \"SERVER,TEST\" -c \"magenta,blue\" \"npm run http-server\" \"wait-on tcp:6006 && npm run test-storybook\"",
-    "http-server": "http-server app/storybook -p 6006 --silent"
+    "test-visual": "playwright test",
+    "test-visual:ui": "playwright test --ui",
+    "test-visual:headed": "playwright test --headed",
+    "test-visual:debug": "playwright test --debug",
+    "test-visual:report": "playwright show-report",
+    "test-all": "npm run test-vitest && npm run test-storybook && npm run test-visual",
+    "http-server": "http-server app/storybook -p 6006 --silent",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@eslint/js": "8.57.0",
+    "@playwright/test": "^1.55.0",
     "@storybook/addon-essentials": "^8.6.4",
     "@storybook/addon-interactions": "^8.6.4",
     "@storybook/addon-links": "^8.6.4",
@@ -31,6 +39,7 @@
     "@storybook/react": "^8.6.4",
     "@storybook/test": "^8.6.4",
     "@storybook/test-runner": "^0.19.1",
+    "@tailwindcss/postcss": "^4.0.0-alpha.34",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
@@ -41,23 +50,42 @@
     "browserslist-to-esbuild": "^2.1.1",
     "concurrently": "^9.0.1",
     "eslint": "^8.57.0",
-    "eslint-config-drupal": "^5.0.2",
+    "eslint-config-drupal": "^4.0.1",
     "eslint-config-prettier": "^9.1.0",
     "http-server": "^14.1.1",
+    "husky": "^9.1.7",
     "jsdom": "^26.0.0",
+    "lint-staged": "^16.1.5",
+    "playwright": "^1.55.0",
     "postcss-preset-env": "^10.0.5",
     "prettier": "^3.3.3",
+    "puppeteer": "^24.17.1",
     "storybook": "^8.6.4",
     "stylelint": "^16.9.0",
     "stylelint-config-standard": "^36.0.1",
+    "tailwindcss": "^4.0.0-alpha.34",
     "tinyglobby": "^0.2.9",
-    "vite": "^5.4.8",
+    "vite": "^6.3.5",
     "vite-plugin-twig-drupal": "^1.4.1",
     "vitest": "^3.0.8",
-    "wait-on": "^8.0.1",
-    "tailwindcss": "^4.0.0-alpha.34",
-    "@tailwindcss/postcss": "^4.0.0-alpha.34"
+    "wait-on": "^8.0.1"
   },
   "type": "module",
-  "private": true
+  "private": true,
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css,scss}": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ],
+    "*.html": [
+      "prettier --write --parser html"
+    ]
+  }
 }

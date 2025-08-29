@@ -44,6 +44,8 @@ export default [
       'web/profiles/contrib',
       'web/libraries',
       'web/storybook',
+      'app/libraries/**',
+      'app/storybook/**',
     ],
   },
 ]

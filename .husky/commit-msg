@@ -1,0 +1,36 @@
+# DHB Handball WM 2027 - Commit Message Validation
+# Ensure commit messages follow conventional commit format
+
+# Get the commit message
+commit_regex='^(feat|fix|docs|style|refactor|test|chore|perf|ci|build|revert)(\(.+\))?: .{1,50}'
+
+if ! grep -qE "$commit_regex" "$1"; then
+    echo ""
+    echo "❌ Invalid commit message format!"
+    echo ""
+    echo "📋 Commit message should follow the format:"
+    echo "   <type>[optional scope]: <description>"
+    echo ""
+    echo "🏷️  Valid types:"
+    echo "   feat:     A new feature"
+    echo "   fix:      A bug fix"
+    echo "   docs:     Documentation changes"
+    echo "   style:    Code style changes (formatting, etc.)"
+    echo "   refactor: Code changes that neither fix a bug nor add a feature"
+    echo "   test:     Adding or modifying tests"
+    echo "   chore:    Changes to build process, dependencies, etc."
+    echo "   perf:     Performance improvements"
+    echo "   ci:       CI/CD related changes"
+    echo "   build:    Changes to build system or external dependencies"
+    echo "   revert:   Reverts a previous commit"
+    echo ""
+    echo "📝 Examples:"
+    echo "   feat: add DHB brand colors to design system"
+    echo "   fix(typography): resolve heading font-weight issue"
+    echo "   docs: update component usage guidelines"
+    echo "   test: add visual regression tests for brand logo"
+    echo ""
+    exit 1
+fi
+
+echo "✅ Commit message format is valid!"

@@ -1,0 +1,2 @@
+# DHB Handball WM 2027 - Pre-commit Quality Checks
+npx lint-staged

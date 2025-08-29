@@ -1,9 +1,7 @@
 {
   "agents": {
     "claude": {
-      "args": [
-        "--dangerously-skip-permissions"
-      ],
+      "args": ["--dangerously-skip-permissions"],
       "cli": "claude"
     }
   },
