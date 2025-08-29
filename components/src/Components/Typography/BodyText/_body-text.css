@@ -1,0 +1,185 @@
+/* DHB Body Text Typography Component */
+.body-text {
+  font-family: var(--font-body, system-ui, sans-serif);
+  font-weight: var(--body-font-weight);
+  letter-spacing: var(--body-letter-spacing);
+  line-height: var(--body-line-height);
+  margin: 0;
+}
+
+/* Size Variants */
+.body-text--xs {
+  font-size: 0.75rem;
+  line-height: 1.375;
+}
+
+.body-text--sm {
+  font-size: 0.875rem;
+  line-height: 1.625;
+}
+
+.body-text--base {
+  font-size: 1rem;
+  line-height: 1.625;
+}
+
+.body-text--lg {
+  font-size: 1.125rem;
+  line-height: 1.625;
+}
+
+.body-text--xl {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.body-text--2xl {
+  font-size: 1.5rem;
+  line-height: 1.375;
+}
+
+/* Lead Text (Introduction paragraphs) */
+.body-text--lead {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+
+/* Caption Text (Small descriptions) */
+.body-text--caption {
+  font-size: 0.875rem;
+  line-height: 1.375;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+}
+
+/* Weight Variants */
+.body-text--light {
+  font-weight: 300;
+}
+
+.body-text--normal {
+  font-weight: 400;
+}
+
+.body-text--medium {
+  font-weight: 500;
+}
+
+.body-text--semibold {
+  font-weight: 600;
+}
+
+.body-text--bold {
+  font-weight: 700;
+}
+
+/* Color Variants */
+.body-text--primary {
+  color: var(--dhb-white);
+}
+
+.body-text--navy {
+  color: var(--dhb-navy);
+}
+
+.body-text--yellow {
+  color: var(--dhb-yellow);
+}
+
+.body-text--red {
+  color: var(--dhb-red);
+}
+
+.body-text--white {
+  color: var(--dhb-white);
+}
+
+.body-text--muted {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.body-text--muted-dark {
+  color: rgba(26, 26, 46, 0.7);
+}
+
+/* Special Variants for PDF Content */
+.body-text--event-description {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  color: var(--dhb-white);
+}
+
+.body-text--tournament-info {
+  font-size: 0.875rem;
+  line-height: 1.625;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.body-text--venue-description {
+  font-size: 0.875rem;
+  line-height: 1.625;
+  font-weight: 400;
+  color: var(--dhb-white);
+}
+
+.body-text--faq-answer {
+  font-size: 1rem;
+  line-height: 1.625;
+  font-weight: 400;
+  color: var(--dhb-white);
+}
+
+/* Interactive States */
+.body-text--link {
+  color: var(--dhb-yellow);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.body-text--link:hover {
+  color: var(--dhb-red);
+  text-decoration-color: var(--dhb-red);
+}
+
+.body-text--link:focus {
+  outline: 2px solid var(--dhb-yellow);
+  outline-offset: 2px;
+  border-radius: 0.125rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .body-text--lead {
+    font-size: 1rem;
+    line-height: 1.625;
+  }
+  
+  .body-text--2xl {
+    font-size: 1.25rem;
+  }
+  
+  .body-text--xl {
+    font-size: 1.125rem;
+  }
+  
+  .body-text--lg {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .body-text--lead {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+  
+  .body-text--base {
+    font-size: 0.875rem;
+  }
+}

@@ -1,0 +1,50 @@
+/* Tailwind CSS 4 imports */
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+
+/* Component Imports */
+@import '@components/src/Components/Typography/BrandLogo/_brand-logo.css';
+@import '@components/src/Components/Typography/Heading/_heading.css';
+@import '@components/src/Components/Typography/BodyText/_body-text.css';
+
+/* DHB Design System - Custom Properties */
+:root {
+  /* DHB Brand Colors */
+  --dhb-navy: #1a1a2e;
+  --dhb-white: #ffffff;
+  --dhb-yellow: #feca57;
+  --dhb-red: #ff4757;
+  
+  /* Typography Scale */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 4rem;
+  --font-size-7xl: 5rem;
+  --font-size-8xl: 6rem;
+  
+  /* Brand Typography */
+  --brand-font-size-xs: 2rem;
+  --brand-font-size-sm: 3rem;
+  --brand-font-size-md: 4rem;
+  --brand-font-size-lg: 5rem;
+  --brand-font-size-xl: 6rem;
+  --brand-font-weight: 900;
+  --brand-letter-spacing: -0.02em;
+  --brand-line-height: 0.9;
+  
+  /* Display Typography */
+  --display-font-weight: 700;
+  --display-letter-spacing: -0.01em;
+  
+  /* Body Typography */
+  --body-font-weight: 400;
+  --body-line-height: 1.6;
+  --body-letter-spacing: 0;
+}

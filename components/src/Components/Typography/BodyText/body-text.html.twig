@@ -1,0 +1,4 @@
+<{{ tag|default('p') }} class="body-text body-text--{{ size|default('base') }} body-text--{{ weight|default('normal') }} body-text--{{ color|default('primary') }} {{ classes|default('') }}"
+     {% if id %}id="{{ id }}"{% endif %}>
+  {{ text|raw }}
+</{{ tag|default('p') }}>

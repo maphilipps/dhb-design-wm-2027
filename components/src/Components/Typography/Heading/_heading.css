@@ -1,0 +1,236 @@
+/* DHB Heading Typography Component */
+.heading {
+  font-family: var(--font-display, system-ui, sans-serif);
+  font-weight: var(--display-font-weight);
+  letter-spacing: var(--display-letter-spacing);
+  margin: 0;
+  line-height: 1.25;
+  position: relative;
+}
+
+/* Heading Levels */
+.heading--1 {
+  font-size: var(--font-size-5xl);
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.heading--2 {
+  font-size: var(--font-size-4xl);
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.heading--3 {
+  font-size: var(--font-size-3xl);
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+.heading--4 {
+  font-size: var(--font-size-2xl);
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.heading--5 {
+  font-size: var(--font-size-xl);
+  line-height: 1.4;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.heading--6 {
+  font-size: var(--font-size-lg);
+  line-height: 1.4;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+/* Display Headings (Hero sections) */
+.heading--display {
+  font-size: var(--font-size-6xl);
+  line-height: 0.85;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  word-spacing: -0.1em;
+}
+
+.heading--display-sm {
+  font-size: var(--font-size-4xl);
+  line-height: 0.95;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  word-spacing: -0.05em;
+}
+
+/* Brand Display (27WM27 style) */
+.heading--brand {
+  font-size: var(--font-size-7xl);
+  line-height: 0.8;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  word-spacing: -0.15em;
+  font-family: var(--font-brand, system-ui, sans-serif);
+}
+
+/* Section Headings */
+.heading--section {
+  font-size: var(--font-size-2xl);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.heading--section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 3.5rem;
+  height: 3px;
+  background: linear-gradient(90deg, var(--dhb-yellow) 0%, var(--dhb-red) 100%);
+  border-radius: 2px;
+}
+
+/* Section heading variants for different contexts */
+.heading--section-large {
+  font-size: var(--font-size-3xl);
+  letter-spacing: 0.08em;
+}
+
+.heading--section-large::after {
+  width: 4rem;
+  height: 4px;
+}
+
+/* Color Variants */
+.heading--primary {
+  color: var(--dhb-white);
+}
+
+.heading--navy {
+  color: var(--dhb-navy);
+}
+
+.heading--yellow {
+  color: var(--dhb-yellow);
+}
+
+.heading--red {
+  color: var(--dhb-red);
+}
+
+.heading--white {
+  color: var(--dhb-white);
+}
+
+.heading--gradient {
+  background: linear-gradient(135deg, var(--dhb-yellow) 0%, var(--dhb-red) 50%, var(--dhb-yellow) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300% 300%;
+  animation: gradient-shift 4s ease-in-out infinite;
+}
+
+/* Enhanced gradient for brand elements */
+.heading--gradient-brand {
+  background: linear-gradient(45deg, var(--dhb-yellow) 0%, var(--dhb-red) 25%, var(--dhb-yellow) 50%, var(--dhb-red) 75%, var(--dhb-yellow) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400% 400%;
+  animation: gradient-shift-brand 6s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  33% {
+    background-position: 100% 50%;
+  }
+  66% {
+    background-position: 50% 100%;
+  }
+}
+
+@keyframes gradient-shift-brand {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  75% {
+    background-position: 100% 0%;
+  }
+}
+
+.heading--animated {
+  animation: fade-in-up 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+@keyframes fade-in-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heading--display {
+    font-size: var(--font-size-4xl);
+    line-height: 1;
+  }
+  
+  .heading--display-sm {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .heading--1 {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .heading--2 {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .heading--3 {
+    font-size: var(--font-size-xl);
+  }
+  
+  .heading--section {
+    font-size: var(--font-size-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .heading--display {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .heading--1 {
+    font-size: var(--font-size-2xl);
+  }
+}

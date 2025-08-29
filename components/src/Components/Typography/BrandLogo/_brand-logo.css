@@ -1,0 +1,105 @@
+/* DHB Brand Logo Typography Component */
+.brand-logo {
+  display: inline-block;
+  font-family: var(--font-brand, system-ui, sans-serif);
+  font-weight: var(--brand-font-weight);
+  letter-spacing: var(--brand-letter-spacing);
+  line-height: var(--brand-line-height);
+  color: var(--dhb-white);
+  text-transform: uppercase;
+  user-select: none;
+  position: relative;
+}
+
+.brand-logo__text {
+  display: block;
+  background: linear-gradient(135deg, var(--dhb-yellow) 0%, var(--dhb-red) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease-in-out infinite;
+}
+
+/* Brand Logo Variants */
+.brand-logo--xs {
+  font-size: var(--brand-font-size-xs);
+}
+
+.brand-logo--sm {
+  font-size: var(--brand-font-size-sm);
+}
+
+.brand-logo--default,
+.brand-logo--md {
+  font-size: var(--brand-font-size-md);
+}
+
+.brand-logo--lg {
+  font-size: var(--brand-font-size-lg);
+}
+
+.brand-logo--xl {
+  font-size: var(--brand-font-size-xl);
+}
+
+/* Color Variants */
+.brand-logo--primary .brand-logo__text {
+  background: linear-gradient(135deg, var(--dhb-yellow) 0%, var(--dhb-red) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-logo--white .brand-logo__text {
+  background: var(--dhb-white);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-logo--navy .brand-logo__text {
+  background: var(--dhb-navy);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Animations */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.brand-logo[data-animate="brand-pulse"] {
+  animation: brand-pulse 2s ease-in-out infinite;
+}
+
+@keyframes brand-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .brand-logo--xl {
+    font-size: var(--brand-font-size-lg);
+  }
+  
+  .brand-logo--lg {
+    font-size: var(--brand-font-size-md);
+  }
+  
+  .brand-logo--md,
+  .brand-logo--default {
+    font-size: var(--brand-font-size-sm);
+  }
+}

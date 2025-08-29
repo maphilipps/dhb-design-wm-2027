@@ -1,0 +1,4 @@
+<{{ tag|default('h1') }} class="heading heading--{{ level|default('1') }} heading--{{ color|default('primary') }} {{ classes|default('') }}"
+     {% if id %}id="{{ id }}"{% endif %}>
+  {{ text|raw }}
+</{{ tag|default('h1') }}>
