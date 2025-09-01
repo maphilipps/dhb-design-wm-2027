@@ -1,0 +1,137 @@
+/* Color System Component Styles */
+.color-system {
+  @apply space-y-8;
+}
+
+.color-system__title {
+  @apply text-heading-lg font-heading text-dhb-navy mb-6;
+}
+
+/* Color Palette Styles */
+.color-system__palette {
+  @apply space-y-6;
+}
+
+.color-system__color-group {
+  @apply space-y-4;
+}
+
+.color-system__group-title {
+  @apply text-heading-md font-heading text-dhb-navy mb-3;
+}
+
+.color-system__colors {
+  @apply grid grid-cols-2 md:grid-cols-4 gap-4;
+}
+
+/* Color Swatch Styles */
+.color-system__swatch {
+  @apply relative overflow-hidden rounded-lg shadow-sm border border-dhb-gray-200 
+         transition-transform duration-200 hover:scale-105 cursor-pointer
+         focus:outline-none focus:ring-2 focus:ring-dhb-red focus:ring-offset-2;
+}
+
+.color-system__swatch-bg {
+  @apply block w-full h-24 md:h-32;
+}
+
+.color-system__swatch-label {
+  @apply absolute bottom-0 left-0 right-0 bg-white bg-opacity-95 backdrop-blur-sm
+         p-2 text-xs font-medium text-dhb-navy;
+}
+
+.color-system__swatch-name {
+  @apply block font-heading text-sm;
+}
+
+.color-system__swatch-hex {
+  @apply block text-dhb-gray-600 text-xs uppercase tracking-wide;
+}
+
+/* Special styling for white swatch */
+.color-system__swatch--white .color-system__swatch-label {
+  @apply bg-dhb-gray-50;
+}
+
+/* Color Combinations Styles */
+.color-system__combinations {
+  @apply space-y-4;
+}
+
+.color-system__combination-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+.color-system__combination {
+  @apply min-h-[120px] transition-shadow duration-200 hover:shadow-lg;
+}
+
+/* Utility Classes Display */
+.color-system__utilities {
+  @apply space-y-4;
+}
+
+.color-system__utility-grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+.color-system__utility-section {
+  @apply space-y-2;
+}
+
+.color-system__utility-title {
+  @apply text-heading-sm font-heading text-dhb-navy mb-3;
+}
+
+.color-system__utility-code {
+  @apply block bg-dhb-gray-100 text-dhb-navy px-3 py-1 rounded text-sm font-mono
+         border border-dhb-gray-200 mb-1;
+}
+
+/* Accessibility Enhancements */
+.color-system__swatch:focus-visible {
+  @apply outline-none ring-2 ring-dhb-red ring-offset-2;
+}
+
+.color-system__swatch:hover .color-system__swatch-label {
+  @apply bg-opacity-100;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .color-system__swatch {
+    @apply border-2 border-black;
+  }
+  
+  .color-system__swatch-label {
+    @apply bg-white text-black;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .color-system__swatch {
+    @apply transition-none hover:scale-100;
+  }
+  
+  .color-system__combination {
+    @apply transition-none;
+  }
+}
+
+/* Color-specific hover effects */
+.color-system__swatch--navy:hover {
+  @apply shadow-lg shadow-dhb-navy/20;
+}
+
+.color-system__swatch--red:hover {
+  @apply shadow-lg shadow-dhb-red/20;
+}
+
+.color-system__swatch--yellow:hover {
+  @apply shadow-lg shadow-dhb-yellow/20;
+}
+
+.color-system__swatch--white:hover {
+  @apply shadow-lg shadow-dhb-gray-300/30;
+}

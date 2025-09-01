@@ -1,0 +1,129 @@
+<div class="color-system {{ classes|default('') }}"
+  {% if id %} id="{{ id }}"{% endif %}
+  {% if variant %} data-variant="{{ variant }}"{% endif %}
+  role="presentation">
+  
+  {% if title %}
+    <h3 class="color-system__title">{{ title }}</h3>
+  {% endif %}
+
+  {% if show_palette %}
+    <div class="color-system__palette" role="group" aria-label="DHB Brand Color Palette">
+      <!-- Primary Colors -->
+      <div class="color-system__color-group">
+        <h4 class="color-system__group-title">Primary Colors</h4>
+        <div class="color-system__colors">
+          <div class="color-system__swatch color-system__swatch--navy" 
+               title="DHB Navy - Primary Background" 
+               data-color="#1a1a2e"
+               aria-label="DHB Navy: #1a1a2e">
+            <span class="color-system__swatch-bg bg-dhb-navy"></span>
+            <span class="color-system__swatch-label">
+              <span class="color-system__swatch-name">Navy</span>
+              <span class="color-system__swatch-hex">#1a1a2e</span>
+            </span>
+          </div>
+          <div class="color-system__swatch color-system__swatch--red" 
+               title="DHB Red - Primary CTA" 
+               data-color="#ff4757"
+               aria-label="DHB Red: #ff4757">
+            <span class="color-system__swatch-bg bg-dhb-red"></span>
+            <span class="color-system__swatch-label">
+              <span class="color-system__swatch-name">Red</span>
+              <span class="color-system__swatch-hex">#ff4757</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Secondary Colors -->
+      <div class="color-system__color-group">
+        <h4 class="color-system__group-title">Secondary Colors</h4>
+        <div class="color-system__colors">
+          <div class="color-system__swatch color-system__swatch--yellow" 
+               title="DHB Yellow - Accent Color" 
+               data-color="#feca57"
+               aria-label="DHB Yellow: #feca57">
+            <span class="color-system__swatch-bg bg-dhb-yellow"></span>
+            <span class="color-system__swatch-label">
+              <span class="color-system__swatch-name">Yellow</span>
+              <span class="color-system__swatch-hex">#feca57</span>
+            </span>
+          </div>
+          <div class="color-system__swatch color-system__swatch--white" 
+               title="DHB White - Text Overlay" 
+               data-color="#ffffff"
+               aria-label="DHB White: #ffffff">
+            <span class="color-system__swatch-bg bg-dhb-white border border-dhb-gray-300"></span>
+            <span class="color-system__swatch-label">
+              <span class="color-system__swatch-name">White</span>
+              <span class="color-system__swatch-hex">#ffffff</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if show_combinations %}
+    <div class="color-system__combinations" role="group" aria-label="Color Combinations">
+      <h4 class="color-system__group-title">Color Combinations</h4>
+      <div class="color-system__combination-grid">
+        <!-- Navy Background Combinations -->
+        <div class="color-system__combination bg-dhb-navy p-4 rounded-lg">
+          <p class="text-dhb-white mb-2">White text on Navy background</p>
+          <p class="text-dhb-yellow mb-2">Yellow accent on Navy background</p>
+          <p class="text-dhb-red">Red CTA on Navy background</p>
+        </div>
+        
+        <!-- White Background Combinations -->
+        <div class="color-system__combination bg-dhb-white border border-dhb-gray-300 p-4 rounded-lg">
+          <p class="text-dhb-navy mb-2">Navy text on White background</p>
+          <p class="text-dhb-red mb-2">Red text on White background</p>
+          <p class="text-dhb-yellow bg-dhb-navy p-1 rounded">Yellow on Navy accent</p>
+        </div>
+
+        <!-- Red Background Combinations -->
+        <div class="color-system__combination bg-dhb-red p-4 rounded-lg">
+          <p class="text-dhb-white mb-2">White text on Red background</p>
+          <p class="text-dhb-navy bg-dhb-white p-1 rounded">Navy text on White</p>
+        </div>
+
+        <!-- Yellow Background Combinations -->
+        <div class="color-system__combination bg-dhb-yellow p-4 rounded-lg">
+          <p class="text-dhb-navy mb-2">Navy text on Yellow background</p>
+          <p class="text-dhb-white bg-dhb-navy p-1 rounded">White on Navy accent</p>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if show_utilities %}
+    <div class="color-system__utilities" role="group" aria-label="Utility Classes">
+      <h4 class="color-system__group-title">Utility Classes</h4>
+      <div class="color-system__utility-grid">
+        <div class="color-system__utility-section">
+          <h5 class="color-system__utility-title">Background Colors</h5>
+          <code class="color-system__utility-code">bg-dhb-navy</code>
+          <code class="color-system__utility-code">bg-dhb-red</code>
+          <code class="color-system__utility-code">bg-dhb-yellow</code>
+          <code class="color-system__utility-code">bg-dhb-white</code>
+        </div>
+        <div class="color-system__utility-section">
+          <h5 class="color-system__utility-title">Text Colors</h5>
+          <code class="color-system__utility-code">text-dhb-navy</code>
+          <code class="color-system__utility-code">text-dhb-red</code>
+          <code class="color-system__utility-code">text-dhb-yellow</code>
+          <code class="color-system__utility-code">text-dhb-white</code>
+        </div>
+        <div class="color-system__utility-section">
+          <h5 class="color-system__utility-title">Border Colors</h5>
+          <code class="color-system__utility-code">border-dhb-navy</code>
+          <code class="color-system__utility-code">border-dhb-red</code>
+          <code class="color-system__utility-code">border-dhb-yellow</code>
+          <code class="color-system__utility-code">border-dhb-white</code>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</div>
