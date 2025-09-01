@@ -1,0 +1,132 @@
+{#
+/**
+ * Logo Component
+ * @file logo.html.twig
+ * @description Displays various logos including WM27, IHF, and partner logos with accessibility support
+ */
+#}
+
+{% set logo_classes = [
+  'logo',
+  'logo--' ~ (variant|default('default')),
+  'logo--' ~ (size|default('md')),
+  classes|default('')
+] %}
+
+{% if logo_type == 'ihf' %}
+  {# IHF Official Logo - SVG Implementation #}
+  <div {{ drupal_attributes.addClass(logo_classes) }}
+    {% if id %} id="{{ id }}"{% endif %}
+    role="img"
+    aria-label="{{ aria_label|default('30th IHF Men\'s Handball World Championship Germany 2027') }}"
+    {% if sr_only %} aria-hidden="true"{% endif %}>
+    
+    {% if sr_only %}
+      <span class="sr-only">{{ sr_text|default('30th IHF Men\'s Handball World Championship Germany 2027') }}</span>
+    {% endif %}
+    
+    <svg class="logo__svg" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+      {# IHF Logo Circle Background #}
+      <circle cx="80" cy="80" r="78" fill="#1a1a2e" stroke="#feca57" stroke-width="4"/>
+      
+      {# "30th" Text #}
+      <text x="80" y="35" text-anchor="middle" class="logo__text logo__text--large" fill="#feca57">30th</text>
+      
+      {# "IHF MEN'S" Text #}
+      <text x="80" y="55" text-anchor="middle" class="logo__text logo__text--medium" fill="white">IHF MEN'S</text>
+      
+      {# "HANDBALL WORLD" Text #}
+      <text x="80" y="75" text-anchor="middle" class="logo__text logo__text--small" fill="white">HANDBALL WORLD</text>
+      
+      {# "CHAMPIONSHIP" Text #}
+      <text x="80" y="95" text-anchor="middle" class="logo__text logo__text--small" fill="white">CHAMPIONSHIP</text>
+      
+      {# "GERMANY 2027" Text #}
+      <text x="80" y="120" text-anchor="middle" class="logo__text logo__text--medium" fill="#feca57">GERMANY 2027</text>
+      
+      {# IHF Handball Icon (simplified) #}
+      <circle cx="80" cy="140" r="8" fill="#ff4757"/>
+    </svg>
+  </div>
+
+{% elseif logo_type == 'partner' %}
+  {# Partner Logo Implementation #}
+  <div {{ drupal_attributes.addClass(logo_classes) }}
+    {% if id %} id="{{ id }}"{% endif %}
+    role="img"
+    aria-label="{{ aria_label|default(partner_name ~ ' - Official Partner') }}"
+    {% if sr_only %} aria-hidden="true"{% endif %}>
+    
+    {% if sr_only %}
+      <span class="sr-only">{{ sr_text|default(partner_name ~ ' - Official Partner') }}</span>
+    {% endif %}
+    
+    {% if partner_name == 'gerflor' %}
+      <svg class="logo__svg" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="200" height="60" fill="white" rx="8"/>
+        <text x="100" y="35" text-anchor="middle" class="logo__text logo__text--partner" fill="#1a1a2e">Gerflor</text>
+      </svg>
+    {% elseif partner_name == 'hummel' %}
+      <svg class="logo__svg" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="200" height="60" fill="white" rx="8"/>
+        <text x="100" y="35" text-anchor="middle" class="logo__text logo__text--partner" fill="#1a1a2e">hummel</text>
+        <path d="M20,30 L35,20 L35,40 Z" fill="#1a1a2e"/>
+      </svg>
+    {% elseif partner_name == 'molten' %}
+      <svg class="logo__svg" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="200" height="60" fill="white" rx="8"/>
+        <text x="100" y="25" text-anchor="middle" class="logo__text logo__text--partner" fill="#ff4757">molten</text>
+        <text x="100" y="45" text-anchor="middle" class="logo__text logo__text--tagline" fill="#1a1a2e">For the real game</text>
+      </svg>
+    {% elseif partner_name == 'sportfive' %}
+      <svg class="logo__svg" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="200" height="60" fill="white" rx="8"/>
+        <text x="100" y="35" text-anchor="middle" class="logo__text logo__text--partner" fill="#1a1a2e">SPORTFIVE</text>
+      </svg>
+    {% elseif partner_name == 'blaklader' %}
+      <svg class="logo__svg" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="200" height="60" fill="#feca57" rx="8"/>
+        <text x="100" y="35" text-anchor="middle" class="logo__text logo__text--partner" fill="#1a1a2e">BLÄKLÄDER</text>
+      </svg>
+    {% elseif partner_name == 'lidl' %}
+      <svg class="logo__svg" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="200" height="60" fill="#feca57" rx="8"/>
+        <circle cx="40" cy="30" r="15" fill="#ff4757"/>
+        <circle cx="40" cy="30" r="8" fill="#feca57"/>
+        <text x="120" y="35" text-anchor="middle" class="logo__text logo__text--partner" fill="#1a1a2e">Lidl</text>
+      </svg>
+    {% elseif partner_name == 'wurth' %}
+      <svg class="logo__svg" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="200" height="60" fill="white" rx="8"/>
+        <rect x="20" y="20" width="20" height="20" fill="#ff4757"/>
+        <text x="120" y="35" text-anchor="middle" class="logo__text logo__text--partner" fill="#1a1a2e">WÜRTH</text>
+      </svg>
+    {% elseif partner_name == 'grundfos' %}
+      <svg class="logo__svg" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="200" height="60" fill="#1a1a2e" rx="8"/>
+        <text x="100" y="35" text-anchor="middle" class="logo__text logo__text--partner" fill="white">GRUNDFOS</text>
+      </svg>
+    {% endif %}
+  </div>
+
+{% else %}
+  {# Generic Logo Implementation #}
+  <div {{ drupal_attributes.addClass(logo_classes) }}
+    {% if id %} id="{{ id }}"{% endif %}
+    role="img"
+    aria-label="{{ aria_label|default('Logo') }}"
+    {% if sr_only %} aria-hidden="true"{% endif %}>
+    
+    {% if sr_only %}
+      <span class="sr-only">{{ sr_text|default('Logo') }}</span>
+    {% endif %}
+    
+    {% if logo_url %}
+      <img src="{{ logo_url }}" alt="{{ alt_text|default('') }}" class="logo__image" />
+    {% else %}
+      <div class="logo__placeholder">
+        <span class="logo__text">{{ logo_text|default('LOGO') }}</span>
+      </div>
+    {% endif %}
+  </div>
+{% endif %}

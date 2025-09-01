@@ -6,6 +6,7 @@
 @import '@components/src/Components/Typography/BrandLogo/_brand-logo.css';
 @import '@components/src/Components/Typography/Heading/_heading.css';
 @import '@components/src/Components/Typography/BodyText/_body-text.css';
+@import '@components/src/Components/Branding/Logo/_logo.css';
 
 /* 
  * DHB Design System - Custom Properties

@@ -1,0 +1,393 @@
+/* DHB Logo System Component */
+.logo {
+  display: inline-block;
+  position: relative;
+  user-select: none;
+  vertical-align: middle;
+}
+
+/* Logo SVG Base Styles */
+.logo__svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+}
+
+/* Logo Image Base Styles */
+.logo__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Logo Text Styles for SVG */
+.logo__text {
+  font-family: var(--font-brand, system-ui, sans-serif);
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+
+.logo__text--large {
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.logo__text--medium {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.logo__text--small {
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.logo__text--partner {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.logo__text--tagline {
+  font-size: 10px;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.05em;
+}
+
+/* Logo Size Variants */
+.logo--xs {
+  width: 2rem;
+  height: auto;
+}
+
+.logo--sm {
+  width: 3rem;
+  height: auto;
+}
+
+.logo--md,
+.logo--default {
+  width: 4rem;
+  height: auto;
+}
+
+.logo--lg {
+  width: 6rem;
+  height: auto;
+}
+
+.logo--xl {
+  width: 8rem;
+  height: auto;
+}
+
+.logo--xxl {
+  width: 10rem;
+  height: auto;
+}
+
+/* IHF Logo Specific Styles */
+.logo--ihf {
+  max-width: 160px;
+}
+
+.logo--ihf .logo__svg {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* Partner Logo Specific Styles */
+.logo--partner {
+  background: transparent;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.logo--partner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Partner Logo Container Grid */
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.logo-grid--compact {
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+/* Logo Placeholder for missing images */
+.logo__placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--dhb-white);
+  border: 2px dashed var(--dhb-navy);
+  border-radius: 8px;
+  min-height: 60px;
+  color: var(--dhb-navy);
+}
+
+.logo__placeholder .logo__text {
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+/* Interactive Logo Styles */
+.logo--interactive {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logo--interactive:hover {
+  transform: scale(1.05);
+}
+
+.logo--interactive:active {
+  transform: scale(0.98);
+}
+
+/* Focus Management for Interactive Logos */
+.logo--interactive {
+  outline: 0;
+  border-radius: 8px;
+}
+
+.logo--interactive:focus,
+.logo--interactive:focus-visible {
+  outline: 3px solid var(--dhb-yellow);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 6px rgba(254, 202, 87, 0.2);
+}
+
+/* Dark/Light Theme Variants */
+.logo--dark-bg {
+  background: var(--dhb-navy);
+  color: var(--dhb-white);
+}
+
+.logo--light-bg {
+  background: var(--dhb-white);
+  color: var(--dhb-navy);
+}
+
+/* 
+ * Accessibility Features
+ * ======================
+ * Enhanced accessibility support for WCAG 2.1 AA compliance
+ */
+
+/* Screen Reader Only Content (shared with other components) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .logo--partner {
+    border: 2px solid;
+  }
+  
+  .logo__svg text {
+    stroke: currentColor;
+    stroke-width: 0.5px;
+  }
+  
+  .logo--interactive:focus,
+  .logo--interactive:focus-visible {
+    outline: 3px solid #ffff00;
+    outline-offset: 4px;
+    box-shadow: 0 0 0 8px rgba(255, 255, 0, 0.3);
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .logo--partner,
+  .logo--interactive {
+    transition: none;
+    transform: none;
+  }
+  
+  .logo--partner:hover,
+  .logo--interactive:hover {
+    transform: none;
+  }
+}
+
+/* Forced Colors Mode (Windows High Contrast) */
+@media (forced-colors: active) {
+  .logo__svg {
+    forced-color-adjust: auto;
+  }
+  
+  .logo--partner {
+    border: 1px solid ButtonBorder;
+  }
+  
+  .logo--interactive:focus,
+  .logo--interactive:focus-visible {
+    outline: 2px solid Highlight;
+    outline-offset: 4px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .logo--xl {
+    width: 6rem;
+  }
+  
+  .logo--lg {
+    width: 4rem;
+  }
+  
+  .logo--md,
+  .logo--default {
+    width: 3rem;
+  }
+  
+  .logo-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+  
+  .logo__text--partner {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .logo__text--large {
+    font-size: 12px;
+  }
+  
+  .logo__text--medium {
+    font-size: 10px;
+  }
+  
+  .logo__text--small {
+    font-size: 6px;
+  }
+}
+
+/* Touch Target Enhancement for Mobile Accessibility */
+@media (pointer: coarse) {
+  .logo--interactive {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0.5rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .logo {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  
+  .logo--partner {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+}
+
+/* Color Blind Support - Enhanced Contrast */
+.logo__svg {
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+/* Animation Support for Interactive Elements */
+.logo--animated {
+  animation: logo-pulse 3s ease-in-out infinite;
+}
+
+@keyframes logo-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Error State for Logo Loading */
+.logo--error {
+  outline: 2px solid var(--dhb-red);
+  outline-offset: 2px;
+}
+
+.logo--error .logo__placeholder {
+  background: rgba(255, 71, 87, 0.1);
+  border-color: var(--dhb-red);
+  color: var(--dhb-red);
+}
+
+/* Loading State */
+.logo--loading {
+  opacity: 0.6;
+}
+
+.logo--loading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Logo Brand Integration */
+.logo--brand-integration {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo--brand-integration .logo {
+  flex-shrink: 0;
+}
