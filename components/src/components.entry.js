@@ -2,6 +2,7 @@
 import { BodyText } from './Components/Typography/BodyText/body-text.js'
 import BrandLogo from './Components/Typography/BrandLogo/brand-logo.js'
 import Heading from './Components/Typography/Heading/heading.js'
+import './Components/Icons/Icon/icon.js'
 
 // Register Drupal behaviors for existing components
 Drupal.behaviors.BodyText = {

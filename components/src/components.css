@@ -6,6 +6,7 @@
 @import '@components/src/Components/Typography/BrandLogo/_brand-logo.css';
 @import '@components/src/Components/Typography/Heading/_heading.css';
 @import '@components/src/Components/Typography/BodyText/_body-text.css';
+@import '@components/src/Components/Icons/Icon/_icon.css';
 
 /* 
  * DHB Design System - Custom Properties
@@ -36,6 +37,17 @@
   --dhb-white: #ffffff;    /* Primary light text/background color */
   --dhb-yellow: #feca57;   /* Accent color for highlights and CTAs */
   --dhb-red: #ff4757;      /* Secondary accent color for emphasis */
+  
+  /* Gray Scale */
+  --dhb-gray-100: #f8f9fa;
+  --dhb-gray-200: #e9ecef;
+  --dhb-gray-300: #dee2e6;
+  --dhb-gray-400: #ced4da;
+  --dhb-gray-500: #adb5bd;
+  --dhb-gray-600: #6c757d;
+  --dhb-gray-700: #495057;
+  --dhb-gray-800: #343a40;
+  --dhb-gray-900: #212529;
 
   /* 
    * Typography Scale
