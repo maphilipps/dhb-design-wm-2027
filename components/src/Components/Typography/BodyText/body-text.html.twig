@@ -1,0 +1,14 @@
+<{{ tag|default('p') }} class="body-text body-text--{{ size|default('base') }} body-text--{{ weight|default('normal') }} body-text--{{ color|default('primary') }} {{ classes|default('') }}"
+  {% if id %} id="{{ id }}"{% endif %}
+  {% if aria_label %} aria-label="{{ aria_label }}"{% endif %}
+  {% if aria_describedby %} aria-describedby="{{ aria_describedby }}"{% endif %}
+  {% if role %} role="{{ role }}"{% endif %}
+  {% if lang %} lang="{{ lang }}"{% endif %}
+  {% if is_link %} tabindex="0"{% endif %}
+  {% if reduced_motion %} data-reduced-motion="true"{% endif %}
+  {% if high_contrast %} data-high-contrast="true"{% endif %}>
+  {% if sr_only %}
+    <span class="sr-only">{{ sr_text|default(text) }}</span>
+  {% endif %}
+  {{ text|raw }}
+</{{ tag|default('p') }}>

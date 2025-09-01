@@ -1,0 +1,1074 @@
+/*! tailwindcss v4.1.12 | MIT License | https://tailwindcss.com */
+@supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or
+  ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
+  *,
+  :before,
+  :after,
+  ::backdrop {
+    --tw-rotate-x: initial;
+    --tw-rotate-y: initial;
+    --tw-rotate-z: initial;
+    --tw-skew-x: initial;
+    --tw-skew-y: initial;
+    --tw-border-style: solid;
+    --tw-outline-style: solid;
+  }
+}
+*:not(#\#),
+:not(#\#):after,
+:not(#\#):before,
+:not(#\#)::backdrop {
+  box-sizing: border-box;
+  border: 0 solid;
+  margin: 0;
+  padding: 0;
+}
+:not(#\#)::file-selector-button {
+  box-sizing: border-box;
+  border: 0 solid;
+  margin: 0;
+  padding: 0;
+}
+html:not(#\#),
+:host:not(#\#) {
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  -webkit-tap-highlight-color: transparent;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    Noto Sans,
+    sans-serif,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    Noto Sans,
+    sans-serif,
+    Apple Color Emoji,
+    Segoe UI Emoji,
+    Segoe UI Symbol,
+    Noto Color Emoji;
+  line-height: 1.5;
+}
+hr:not(#\#) {
+  height: 0;
+  color: inherit;
+  border-top-width: 1px;
+}
+abbr:where([title]):not(#\#) {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+h1:not(#\#),
+h2:not(#\#),
+h3:not(#\#),
+h4:not(#\#),
+h5:not(#\#),
+h6:not(#\#) {
+  font-size: inherit;
+  font-weight: inherit;
+}
+a:not(#\#) {
+  color: inherit;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+}
+b:not(#\#),
+strong:not(#\#) {
+  font-weight: bolder;
+}
+code:not(#\#),
+kbd:not(#\#),
+samp:not(#\#),
+pre:not(#\#) {
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    Liberation Mono,
+    Courier New,
+    monospace;
+  font-size: 1em;
+}
+small:not(#\#) {
+  font-size: 80%;
+}
+sub:not(#\#),
+sup:not(#\#) {
+  vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+sub:not(#\#) {
+  bottom: -0.25em;
+}
+sup:not(#\#) {
+  top: -0.5em;
+}
+table:not(#\#) {
+  text-indent: 0;
+  border-color: inherit;
+  border-collapse: collapse;
+}
+:-moz-focusring:not(#\#) {
+  outline: auto;
+}
+progress:not(#\#) {
+  vertical-align: baseline;
+}
+summary:not(#\#) {
+  display: list-item;
+}
+ol:not(#\#),
+ul:not(#\#),
+menu:not(#\#) {
+  list-style: none;
+}
+img:not(#\#),
+svg:not(#\#),
+video:not(#\#),
+canvas:not(#\#),
+audio:not(#\#),
+iframe:not(#\#),
+embed:not(#\#),
+object:not(#\#) {
+  vertical-align: middle;
+  display: block;
+}
+img:not(#\#),
+video:not(#\#) {
+  max-width: 100%;
+  height: auto;
+}
+button:not(#\#),
+input:not(#\#),
+select:not(#\#),
+optgroup:not(#\#),
+textarea:not(#\#) {
+  font: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  opacity: 1;
+  background-color: #0000;
+  border-radius: 0;
+}
+:not(#\#)::file-selector-button {
+  font: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  opacity: 1;
+  background-color: #0000;
+  border-radius: 0;
+}
+:where(select[multiple]):not(#\#) optgroup {
+  font-weight: bolder;
+}
+:where(select[size]):not(#\#) optgroup {
+  font-weight: bolder;
+}
+:where(select[multiple]):not(#\#) optgroup option {
+  padding-left: 20px;
+}
+:where(select[size]):not(#\#) optgroup option {
+  padding-left: 20px;
+}
+:not(#\#)::file-selector-button {
+  margin-right: 4px;
+}
+:not(#\#)::-moz-placeholder {
+  opacity: 1;
+}
+:not(#\#)::placeholder {
+  opacity: 1;
+}
+@supports (not (-webkit-appearance: -apple-pay-button)) or
+  (contain-intrinsic-size: 1px) {
+  :not(#\#)::-moz-placeholder {
+    color: currentColor;
+  }
+  :not(#\#)::placeholder {
+    color: currentColor;
+  }
+  @supports (color: color-mix(in lab, red, red)) {
+    :not(#\#)::-moz-placeholder {
+      color: color-mix(in oklab, currentcolor 50%, transparent);
+    }
+    :not(#\#)::placeholder {
+      color: color-mix(in oklab, currentcolor 50%, transparent);
+    }
+  }
+}
+textarea:not(#\#) {
+  resize: vertical;
+}
+:not(#\#)::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+:not(#\#)::-webkit-date-and-time-value {
+  min-height: 1lh;
+  text-align: inherit;
+}
+:not(#\#)::-webkit-datetime-edit {
+  display: inline-flex;
+}
+:not(#\#)::-webkit-datetime-edit-fields-wrapper {
+  padding: 0;
+}
+:not(#\#)::-webkit-datetime-edit {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+:not(#\#)::-webkit-datetime-edit-year-field {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+:not(#\#)::-webkit-datetime-edit-month-field {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+:not(#\#)::-webkit-datetime-edit-day-field {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+:not(#\#)::-webkit-datetime-edit-hour-field {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+:not(#\#)::-webkit-datetime-edit-minute-field {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+:not(#\#)::-webkit-datetime-edit-second-field {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+:not(#\#)::-webkit-datetime-edit-millisecond-field {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+:not(#\#)::-webkit-datetime-edit-meridiem-field {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+:not(#\#)::-webkit-calendar-picker-indicator {
+  line-height: 1;
+}
+:-moz-ui-invalid:not(#\#) {
+  box-shadow: none;
+}
+button:not(#\#),
+input:where([type='button'], [type='reset'], [type='submit']):not(#\#) {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+:not(#\#)::file-selector-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+:not(#\#)::-webkit-inner-spin-button {
+  height: auto;
+}
+:not(#\#)::-webkit-outer-spin-button {
+  height: auto;
+}
+[hidden]:where(:not([hidden='until-found'])) {
+  display: none !important;
+}
+.visible:not(#\#) {
+  visibility: visible;
+}
+.absolute:not(#\#) {
+  position: absolute;
+}
+.fixed:not(#\#) {
+  position: fixed;
+}
+.relative:not(#\#) {
+  position: relative;
+}
+.static:not(#\#) {
+  position: static;
+}
+.isolate:not(#\#) {
+  isolation: isolate;
+}
+.container:not(#\#) {
+  width: 100%;
+}
+.block:not(#\#) {
+  display: block;
+}
+.contents:not(#\#) {
+  display: contents;
+}
+.grid:not(#\#) {
+  display: grid;
+}
+.hidden:not(#\#) {
+  display: none;
+}
+.inline:not(#\#) {
+  display: inline;
+}
+.table:not(#\#) {
+  display: table;
+}
+.transform:not(#\#) {
+  transform:;
+  transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,)
+    var(--tw-skew-x,) var(--tw-skew-y,);
+}
+.border:not(#\#) {
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+}
+.outline:not(#\#) {
+  outline-style: var(--tw-outline-style);
+  outline-width: 1px;
+}
+.transition:not(#\#) {
+  transition-property:
+    color, background-color, border-color, outline-color, text-decoration-color,
+    fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to,
+    opacity, box-shadow, transform, translate, scale, rotate, filter,
+    backdrop-filter, display, visibility, content-visibility, overlay,
+    pointer-events;
+  transition-timing-function: ease;
+  transition-timing-function: var(--tw-ease, ease);
+  transition-duration: 0s;
+  transition-duration: var(--tw-duration, 0s);
+}
+.brand-logo:not(#\#) {
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    Noto Sans,
+    sans-serif,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    Noto Sans,
+    sans-serif,
+    sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    Noto Sans,
+    sans-serif,
+    sans-serif;
+  font-family: var(
+    --font-brand,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    Noto Sans,
+    sans-serif,
+    sans-serif
+  );
+  font-weight: 900;
+  font-weight: var(--brand-font-weight);
+  letter-spacing: -0.02em;
+  letter-spacing: var(--brand-letter-spacing);
+  line-height: 0.9;
+  line-height: var(--brand-line-height);
+  color: #fff;
+  color: var(--dhb-white);
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  display: inline-block;
+  position: relative;
+}
+.brand-logo__text:not(#\#) {
+  background: linear-gradient(135deg, #feca570%, #ff4757100%);
+  background: linear-gradient(
+    135deg,
+    var(--dhb-yellow) 0%,
+    var(--dhb-red) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: 3s ease-in-out infinite gradient-shift;
+  display: block;
+}
+.brand-logo--xs:not(#\#) {
+  font-size: 2rem;
+  font-size: var(--brand-font-size-xs);
+}
+.brand-logo--sm:not(#\#) {
+  font-size: 3rem;
+  font-size: var(--brand-font-size-sm);
+}
+.brand-logo--default:not(#\#),
+.brand-logo--md:not(#\#) {
+  font-size: 4rem;
+  font-size: var(--brand-font-size-md);
+}
+.brand-logo--lg:not(#\#) {
+  font-size: 5rem;
+  font-size: var(--brand-font-size-lg);
+}
+.brand-logo--xl:not(#\#) {
+  font-size: 6rem;
+  font-size: var(--brand-font-size-xl);
+}
+.brand-logo--primary:not(#\#) .brand-logo__text {
+  background: linear-gradient(135deg, #feca570%, #ff4757100%);
+  background: linear-gradient(
+    135deg,
+    var(--dhb-yellow) 0%,
+    var(--dhb-red) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.brand-logo--white:not(#\#) .brand-logo__text {
+  background: #fff;
+  background: var(--dhb-white);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.brand-logo--navy:not(#\#) .brand-logo__text {
+  background: #1a1a2e;
+  background: var(--dhb-navy);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+@keyframes gradient-shift {
+  0%,
+  to {
+    background-position: 0%;
+  }
+  33% {
+    background-position: 100%;
+  }
+  66% {
+    background-position: 50% 100%;
+  }
+}
+.brand-logo[data-animate='brand-pulse']:not(#\#) {
+  animation: 2s ease-in-out infinite brand-pulse;
+}
+@keyframes brand-pulse {
+  0%,
+  to {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+@media (max-width: 768px) {
+  .brand-logo--xl:not(#\#) {
+    font-size: 5rem;
+    font-size: var(--brand-font-size-lg);
+  }
+  .brand-logo--lg:not(#\#) {
+    font-size: 4rem;
+    font-size: var(--brand-font-size-md);
+  }
+  .brand-logo--md:not(#\#),
+  .brand-logo--default:not(#\#) {
+    font-size: 3rem;
+    font-size: var(--brand-font-size-sm);
+  }
+}
+.heading:not(#\#) {
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    Noto Sans,
+    sans-serif,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    Noto Sans,
+    sans-serif,
+    sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    Noto Sans,
+    sans-serif,
+    sans-serif;
+  font-family: var(
+    --font-display,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    Noto Sans,
+    sans-serif,
+    sans-serif
+  );
+  font-weight: 700;
+  font-weight: var(--display-font-weight);
+  letter-spacing: -0.01em;
+  letter-spacing: var(--display-letter-spacing);
+  margin: 0;
+  line-height: 1.25;
+  position: relative;
+}
+.heading--1:not(#\#) {
+  font-size: 3rem;
+  font-size: var(--font-size-5xl);
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  line-height: 1;
+}
+.heading--2:not(#\#) {
+  font-size: 2.25rem;
+  font-size: var(--font-size-4xl);
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.heading--3:not(#\#) {
+  font-size: 1.875rem;
+  font-size: var(--font-size-3xl);
+  letter-spacing: -0.005em;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.heading--4:not(#\#) {
+  font-size: 1.5rem;
+  font-size: var(--font-size-2xl);
+  letter-spacing: 0;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.heading--5:not(#\#) {
+  font-size: 1.25rem;
+  font-size: var(--font-size-xl);
+  letter-spacing: 0;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.heading--6:not(#\#) {
+  font-size: 1.125rem;
+  font-size: var(--font-size-lg);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.heading--display:not(#\#) {
+  font-size: 4rem;
+  font-size: var(--font-size-6xl);
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  word-spacing: -0.1em;
+  font-weight: 900;
+  line-height: 0.85;
+}
+.heading--display-sm:not(#\#) {
+  font-size: 2.25rem;
+  font-size: var(--font-size-4xl);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  word-spacing: -0.05em;
+  font-weight: 800;
+  line-height: 0.95;
+}
+.heading--brand:not(#\#) {
+  font-size: 5rem;
+  font-size: var(--font-size-7xl);
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  word-spacing: -0.15em;
+  font-weight: 900;
+  line-height: 0.8;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    Noto Sans,
+    sans-serif,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    Noto Sans,
+    sans-serif,
+    sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    Noto Sans,
+    sans-serif,
+    sans-serif;
+  font-family: var(
+    --font-brand,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    Noto Sans,
+    sans-serif,
+    sans-serif
+  );
+}
+.heading--section:not(#\#) {
+  font-size: 1.5rem;
+  font-size: var(--font-size-2xl);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  font-weight: 800;
+  line-height: 1.1;
+  position: relative;
+}
+.heading--section:not(#\#):after {
+  content: '';
+  background: linear-gradient(90deg, #feca570%, #ff4757100%);
+  background: linear-gradient(90deg, var(--dhb-yellow) 0%, var(--dhb-red) 100%);
+  border-radius: 2px;
+  width: 3.5rem;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.heading--section-large:not(#\#) {
+  font-size: 1.875rem;
+  font-size: var(--font-size-3xl);
+  letter-spacing: 0.08em;
+}
+.heading--section-large:not(#\#):after {
+  width: 4rem;
+  height: 4px;
+}
+.heading--primary:not(#\#) {
+  color: #fff;
+  color: var(--dhb-white);
+}
+.heading--navy:not(#\#) {
+  color: #1a1a2e;
+  color: var(--dhb-navy);
+}
+.heading--yellow:not(#\#) {
+  color: #feca57;
+  color: var(--dhb-yellow);
+}
+.heading--red:not(#\#) {
+  color: #ff4757;
+  color: var(--dhb-red);
+}
+.heading--white:not(#\#) {
+  color: #fff;
+  color: var(--dhb-white);
+}
+.heading--gradient:not(#\#) {
+  background: linear-gradient(135deg, #feca570%, #ff475750%, #feca57100%);
+  background: linear-gradient(
+    135deg,
+    var(--dhb-yellow) 0%,
+    var(--dhb-red) 50%,
+    var(--dhb-yellow) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: 4s ease-in-out infinite gradient-shift;
+}
+.heading--gradient-brand:not(#\#) {
+  background: linear-gradient(
+    45deg,
+    #feca570%,
+    #ff475725%,
+    #feca5750%,
+    #ff475775%,
+    #feca57100%
+  );
+  background: linear-gradient(
+    45deg,
+    var(--dhb-yellow) 0%,
+    var(--dhb-red) 25%,
+    var(--dhb-yellow) 50%,
+    var(--dhb-red) 75%,
+    var(--dhb-yellow) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: 6s ease-in-out infinite gradient-shift-brand;
+}
+@keyframes gradient-shift-brand {
+  0%,
+  to {
+    background-position: 0%;
+  }
+  25% {
+    background-position: 100%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  75% {
+    background-position: 100% 0;
+  }
+}
+.heading--animated:not(#\#) {
+  opacity: 0;
+  animation: 0.8s ease-out forwards fade-in-up;
+  transform: translateY(2rem);
+}
+@keyframes fade-in-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  .heading--display:not(#\#) {
+    font-size: 2.25rem;
+    font-size: var(--font-size-4xl);
+    line-height: 1;
+  }
+  .heading--display-sm:not(#\#),
+  .heading--1:not(#\#) {
+    font-size: 1.875rem;
+    font-size: var(--font-size-3xl);
+  }
+  .heading--2:not(#\#) {
+    font-size: 1.5rem;
+    font-size: var(--font-size-2xl);
+  }
+  .heading--3:not(#\#),
+  .heading--section:not(#\#) {
+    font-size: 1.25rem;
+    font-size: var(--font-size-xl);
+  }
+}
+@media (max-width: 480px) {
+  .heading--display:not(#\#) {
+    font-size: 1.875rem;
+    font-size: var(--font-size-3xl);
+  }
+  .heading--1:not(#\#) {
+    font-size: 1.5rem;
+    font-size: var(--font-size-2xl);
+  }
+}
+.body-text:not(#\#) {
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    Noto Sans,
+    sans-serif,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    Noto Sans,
+    sans-serif,
+    sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    Noto Sans,
+    sans-serif,
+    sans-serif;
+  font-family: var(
+    --font-body,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    Noto Sans,
+    sans-serif,
+    sans-serif
+  );
+  font-weight: 400;
+  font-weight: var(--body-font-weight);
+  letter-spacing: 0;
+  letter-spacing: var(--body-letter-spacing);
+  line-height: 1.6;
+  line-height: var(--body-line-height);
+  margin: 0;
+}
+.body-text--xs:not(#\#) {
+  font-size: 0.75rem;
+  line-height: 1.375;
+}
+.body-text--sm:not(#\#) {
+  font-size: 0.875rem;
+  line-height: 1.625;
+}
+.body-text--base:not(#\#) {
+  font-size: 1rem;
+  line-height: 1.625;
+}
+.body-text--lg:not(#\#) {
+  font-size: 1.125rem;
+  line-height: 1.625;
+}
+.body-text--xl:not(#\#) {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+.body-text--2xl:not(#\#) {
+  font-size: 1.5rem;
+  line-height: 1.375;
+}
+.body-text--lead:not(#\#) {
+  letter-spacing: -0.005em;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.75rem;
+}
+.body-text--caption:not(#\#) {
+  letter-spacing: 0.025em;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.375;
+}
+.body-text--light:not(#\#) {
+  font-weight: 300;
+}
+.body-text--normal:not(#\#) {
+  font-weight: 400;
+}
+.body-text--medium:not(#\#) {
+  font-weight: 500;
+}
+.body-text--semibold:not(#\#) {
+  font-weight: 600;
+}
+.body-text--bold:not(#\#) {
+  font-weight: 700;
+}
+.body-text--primary:not(#\#) {
+  color: #fff;
+  color: var(--dhb-white);
+}
+.body-text--navy:not(#\#) {
+  color: #1a1a2e;
+  color: var(--dhb-navy);
+}
+.body-text--yellow:not(#\#) {
+  color: #feca57;
+  color: var(--dhb-yellow);
+}
+.body-text--red:not(#\#) {
+  color: #ff4757;
+  color: var(--dhb-red);
+}
+.body-text--white:not(#\#) {
+  color: #fff;
+  color: var(--dhb-white);
+}
+.body-text--muted:not(#\#) {
+  color: #ffffffb3;
+}
+.body-text--muted-dark:not(#\#) {
+  color: #1a1a2eb3;
+}
+.body-text--event-description:not(#\#) {
+  color: #fff;
+  color: var(--dhb-white);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+}
+.body-text--tournament-info:not(#\#) {
+  color: #ffffffe6;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.625;
+}
+.body-text--venue-description:not(#\#) {
+  color: #fff;
+  color: var(--dhb-white);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.625;
+}
+.body-text--faq-answer:not(#\#) {
+  color: #fff;
+  color: var(--dhb-white);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.625;
+}
+.body-text--link:not(#\#) {
+  color: #feca57;
+  color: var(--dhb-yellow);
+  text-underline-offset: 2px;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  transition:
+    color 0.2s,
+    text-decoration-color 0.2s;
+}
+.body-text--link:hover:not(#\#) {
+  color: #ff4757;
+  color: var(--dhb-red);
+  text-decoration-color: #ff4757;
+  text-decoration-color: var(--dhb-red);
+}
+.body-text--link:focus:not(#\#) {
+  outline: 2px solid #feca57;
+  outline: 2px solid var(--dhb-yellow);
+  outline-offset: 2px;
+  border-radius: 0.125rem;
+}
+@media (max-width: 768px) {
+  .body-text--lead:not(#\#) {
+    font-size: 1rem;
+    line-height: 1.625;
+  }
+  .body-text--2xl:not(#\#) {
+    font-size: 1.25rem;
+  }
+  .body-text--xl:not(#\#) {
+    font-size: 1.125rem;
+  }
+  .body-text--lg:not(#\#) {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .body-text--lead:not(#\#) {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+  .body-text--base:not(#\#) {
+    font-size: 0.875rem;
+  }
+}
+:root:not(#\#) {
+  --dhb-navy: #1a1a2e;
+  --dhb-white: #fff;
+  --dhb-yellow: #feca57;
+  --dhb-red: #ff4757;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 4rem;
+  --font-size-7xl: 5rem;
+  --font-size-8xl: 6rem;
+  --brand-font-size-xs: 2rem;
+  --brand-font-size-sm: 3rem;
+  --brand-font-size-md: 4rem;
+  --brand-font-size-lg: 5rem;
+  --brand-font-size-xl: 6rem;
+  --brand-font-weight: 900;
+  --brand-letter-spacing: -0.02em;
+  --brand-line-height: 0.9;
+  --display-font-weight: 700;
+  --display-letter-spacing: -0.01em;
+  --body-font-weight: 400;
+  --body-line-height: 1.6;
+  --body-letter-spacing: 0;
+}
+@property --tw-rotate-x {
+  syntax: '*';
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: '*';
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: '*';
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: '*';
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: '*';
+  inherits: false;
+}
+@property --tw-border-style {
+  syntax: '*';
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-outline-style {
+  syntax: '*';
+  inherits: false;
+  initial-value: solid;
+}
