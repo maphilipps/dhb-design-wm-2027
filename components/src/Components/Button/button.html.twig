@@ -1,0 +1,46 @@
+<{{ tag|default('button') }} 
+  class="button button--{{ variant|default('primary') }} button--{{ size|default('medium') }} {{ classes|default('') }}"
+  {% if id %} id="{{ id }}"{% endif %}
+  {% if type %} type="{{ type }}"{% endif %}
+  {% if disabled %} disabled{% endif %}
+  {% if href and tag == 'a' %} href="{{ href }}"{% endif %}
+  {% if target and tag == 'a' %} target="{{ target }}"{% endif %}
+  {% if rel and tag == 'a' %} rel="{{ rel }}"{% endif %}
+  {% if aria_label %} aria-label="{{ aria_label }}"{% endif %}
+  {% if aria_describedby %} aria-describedby="{{ aria_describedby }}"{% endif %}
+  {% if aria_expanded %} aria-expanded="{{ aria_expanded }}"{% endif %}
+  {% if aria_pressed %} aria-pressed="{{ aria_pressed }}"{% endif %}
+  {% if role %} role="{{ role }}"{% endif %}
+  tabindex="{{ tabindex|default(0) }}"
+  {% if data_attributes %}{% for key, value in data_attributes %} data-{{ key }}="{{ value }}"{% endfor %}{% endif %}
+  {% if alpine_click %} @click="{{ alpine_click }}"{% endif %}
+  {% if alpine_data %} x-data="{{ alpine_data }}"{% endif %}
+  {% if loading %} x-bind:disabled="loading" x-bind:class="{ 'button--loading': loading }"{% endif %}>
+  
+  {% if icon_start %}
+    <span class="button__icon button__icon--start" aria-hidden="true">
+      {{ icon_start|raw }}
+    </span>
+  {% endif %}
+  
+  <span class="button__content">
+    {% if loading %}
+      <span x-show="loading" class="button__spinner" aria-hidden="true">
+        <svg class="button__spinner-icon" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" opacity="0.3"/>
+          <path d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" fill="currentColor"/>
+        </svg>
+      </span>
+    {% endif %}
+    <span {% if loading %}x-show="!loading"{% endif %}>
+      {{ text|raw }}
+    </span>
+  </span>
+  
+  {% if icon_end %}
+    <span class="button__icon button__icon--end" aria-hidden="true">
+      {{ icon_end|raw }}
+    </span>
+  {% endif %}
+  
+</{{ tag|default('button') }}>

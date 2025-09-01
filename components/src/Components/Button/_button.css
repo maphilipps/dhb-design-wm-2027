@@ -1,0 +1,206 @@
+/**
+ * Button Component Styles
+ * DHB Handball World Championship 2027
+ * 
+ * Primary: Red background (#ff4757) with white text
+ * Secondary: Yellow background (#feca57) with navy text  
+ * Text: Navy text (#1a1a2e) with hover underline
+ */
+
+/* Base button styles */
+.button {
+  @apply inline-flex items-center justify-center gap-2;
+  @apply font-bold text-center leading-tight;
+  @apply border border-transparent;
+  @apply transition-all duration-200 ease-out;
+  @apply cursor-pointer select-none;
+  @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+  @apply disabled:cursor-not-allowed disabled:opacity-60;
+  text-decoration: none; /* For anchor tag buttons */
+}
+
+/* Button content wrapper */
+.button__content {
+  @apply relative inline-flex items-center justify-center;
+}
+
+/* Icon styling */
+.button__icon {
+  @apply inline-flex shrink-0 items-center justify-center;
+}
+
+.button__icon svg {
+  @apply w-5 h-5;
+}
+
+.button__icon--start {
+  @apply -ml-1 mr-1;
+}
+
+.button__icon--end {
+  @apply ml-1 -mr-1;
+}
+
+/* Loading spinner */
+.button__spinner {
+  @apply absolute inset-0 flex items-center justify-center;
+}
+
+.button__spinner-icon {
+  @apply w-5 h-5 animate-spin;
+}
+
+/* Size variants */
+.button--small {
+  @apply px-3 py-1.5 text-sm rounded-md;
+  min-height: 2rem; /* 32px */
+}
+
+.button--small .button__icon svg {
+  @apply w-4 h-4;
+}
+
+.button--medium {
+  @apply px-4 py-2.5 text-base rounded-lg;
+  min-height: 2.75rem; /* 44px - touch target */
+}
+
+.button--large {
+  @apply px-6 py-3 text-lg rounded-lg;
+  min-height: 3.5rem; /* 56px */
+}
+
+.button--large .button__icon svg {
+  @apply w-6 h-6;
+}
+
+/* Primary variant - Red CTA button */
+.button--primary {
+  @apply bg-[#ff4757] text-white;
+  @apply hover:bg-[#e63946] hover:shadow-lg hover:-translate-y-0.5;
+  @apply active:bg-[#d32f2f] active:translate-y-0;
+  @apply focus:ring-[#ff4757]/50;
+}
+
+.button--primary.button--loading {
+  @apply bg-[#e63946];
+}
+
+/* Secondary variant - Yellow button */
+.button--secondary {
+  @apply bg-[#feca57] text-[#1a1a2e];
+  @apply hover:bg-[#f1c40f] hover:shadow-lg hover:-translate-y-0.5;
+  @apply active:bg-[#e6b800] active:translate-y-0;
+  @apply focus:ring-[#feca57]/50;
+}
+
+.button--secondary.button--loading {
+  @apply bg-[#f1c40f];
+}
+
+/* Text variant - Navy text with underline */
+.button--text {
+  @apply bg-transparent text-[#1a1a2e] p-1;
+  @apply hover:underline hover:text-[#0f0f1a];
+  @apply active:text-[#000000];
+  @apply focus:ring-[#1a1a2e]/30;
+  min-height: auto;
+}
+
+/* Text variant on dark backgrounds */
+.button--text.button--text-light {
+  @apply text-white hover:text-gray-200 active:text-gray-300;
+  @apply focus:ring-white/30;
+}
+
+/* Outline variants */
+.button--outline-primary {
+  @apply bg-transparent text-[#ff4757] border-[#ff4757];
+  @apply hover:bg-[#ff4757] hover:text-white hover:shadow-lg hover:-translate-y-0.5;
+  @apply active:bg-[#e63946] active:border-[#e63946] active:translate-y-0;
+  @apply focus:ring-[#ff4757]/50;
+}
+
+.button--outline-secondary {
+  @apply bg-transparent text-[#feca57] border-[#feca57];
+  @apply hover:bg-[#feca57] hover:text-[#1a1a2e] hover:shadow-lg hover:-translate-y-0.5;
+  @apply active:bg-[#f1c40f] active:border-[#f1c40f] active:translate-y-0;
+  @apply focus:ring-[#feca57]/50;
+}
+
+.button--outline-white {
+  @apply bg-transparent text-white border-white;
+  @apply hover:bg-white hover:text-[#1a1a2e] hover:shadow-lg hover:-translate-y-0.5;
+  @apply active:bg-gray-200 active:border-gray-200 active:translate-y-0;
+  @apply focus:ring-white/50;
+}
+
+/* Disabled states */
+.button:disabled,
+.button[disabled] {
+  @apply transform-none shadow-none;
+  @apply hover:transform-none hover:shadow-none;
+}
+
+.button--primary:disabled {
+  @apply bg-gray-400 text-gray-600;
+}
+
+.button--secondary:disabled {
+  @apply bg-gray-300 text-gray-500;
+}
+
+.button--text:disabled {
+  @apply text-gray-400 no-underline;
+  @apply hover:no-underline hover:text-gray-400;
+}
+
+/* Loading state */
+.button--loading {
+  @apply pointer-events-none;
+}
+
+/* High contrast mode support */
+@media (forced-colors: active) {
+  .button {
+    @apply border border-current;
+  }
+  
+  .button--primary,
+  .button--secondary {
+    @apply bg-[ButtonFace] text-[ButtonText] border-[ButtonText];
+  }
+  
+  .button--text {
+    @apply bg-transparent;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    @apply transition-none;
+  }
+  
+  .button__spinner-icon {
+    @apply animate-none;
+  }
+  
+  .button:hover {
+    @apply transform-none;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+  .button:hover {
+    @apply transform-none shadow-none;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .button--text {
+    @apply text-white hover:text-gray-200;
+  }
+}
